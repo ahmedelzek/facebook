@@ -1,0 +1,33 @@
+flutter_native_splash:
+
+  color: "#FFFFFF"
+  # Or use a background image
+  # background_image: "assets/splash_bg.png"
+
+  # Image to display in the center
+  image: assets/facebook_splash_logo.png
+
+  # Branding text below the image
+  branding: assets/meta_brand_logo.png
+  # Or use text instead of image
+  # branding_text: "Your Company Name"
+
+  # Android 12 settings
+  android_12:
+    image: assets/facebook_splash_logo.png
+    color: "#FFFFFF"
+    icon_background_color: "#FFFFFF"
+
+  # Platform-specific settings
+  ios: false
+  android: true
+  web: false
+
+  # Fullscreen mode
+  fullscreen: true
+
+
+  # Whether to keep splash screen until explicitly hidden
+  android_gravity: center
+  ios_content_mode: center
+  web_image_mode: center
