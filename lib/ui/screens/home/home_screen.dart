@@ -16,3 +16,29 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+Widget appBar() {
+  return Row(
+    children: [
+      Image.asset(
+        AppAssets.appTextLogo,
+        width: 150,
+        height: 36,
+      ),
+      const SizedBox(
+        width: 110,
+      ),
+      appBarIcon(),
+      appBarIcon(),
+      appBarIcon()
+    ],
+  );
+}
+
+Widget appBarIcon() {
+  return Image.asset(
+    AppAssets.addBtnIcon,
+    height: 22,
+    width: 22,
+  );
+}

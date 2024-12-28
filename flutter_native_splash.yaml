@@ -15,6 +15,7 @@ flutter_native_splash:
   # Android 12 settings
   android_12:
     image: assets/facebook_splash_logo.png
+    branding: assets/meta_brand_logo.png
     color: "#FFFFFF"
     icon_background_color: "#FFFFFF"
 
@@ -24,7 +25,7 @@ flutter_native_splash:
   web: false
 
   # Fullscreen mode
-  fullscreen: true
+  fullscreen: false
 
 
   # Whether to keep splash screen until explicitly hidden
