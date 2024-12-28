@@ -44,8 +44,10 @@ void showSnackBar(BuildContext context) {
         "Username or Password is invalid",
         style: TextStyle(fontSize: 16, color: Colors.white),
       ),
-      duration: const Duration(seconds: 2), // Duration of the SnackBar
-      backgroundColor: Colors.redAccent, // Background color
+      duration: const Duration(seconds: 2),
+      // Duration of the SnackBar
+      backgroundColor: Colors.redAccent,
+      // Background color
       action: SnackBarAction(
         label: "Ok",
         textColor: Colors.white,
@@ -56,8 +58,53 @@ void showSnackBar(BuildContext context) {
           );
         },
       ),
-      behavior: SnackBarBehavior.floating, // Makes it float above content
+      behavior: SnackBarBehavior.floating,
+      // Makes it float above content
       margin: const EdgeInsets.all(16), // Adds margin when floating
     ),
+  );
+}
+
+Widget appBarIcon(String icon) {
+  return Image.asset(
+    icon,
+    height: 30,
+    width: 30,
+  );
+}
+
+Widget storyItem(String profileImage, String storyImage) {
+  return Container(
+    width: 112,
+    height: 178,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: Stack(
+      alignment: Alignment.topLeft,
+      children: [
+        SizedBox(
+            height: double.infinity,
+            width: double.infinity,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(storyImage, fit: BoxFit.cover))),
+        Container(
+            height: 40,
+            width: 40,
+            margin: const EdgeInsets.all(5),
+            decoration: const BoxDecoration(shape: BoxShape.circle),
+            clipBehavior: Clip.hardEdge,
+            child: Image.asset(profileImage, fit: BoxFit.cover)),
+      ],
+    ),
+  );
+}
+
+Widget lineBetweenItems() {
+  return Container(
+    width: double.infinity,
+    height: 2,
+    decoration: const BoxDecoration(color: AppColors.gray),
   );
 }
