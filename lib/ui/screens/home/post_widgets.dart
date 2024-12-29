@@ -22,12 +22,14 @@ Widget postItem(Post post) {
     children: [
       headerPost(post),
       Container(
-        margin: const EdgeInsets.only(left: 10),
+        margin: const EdgeInsets.only(left: 17),
         alignment: Alignment.centerLeft,
         child: Text(
           post.postText,
-          style: const TextStyle(
-              color: Colors.black, fontWeight: FontWeight.w500, fontSize: 16),
+          style: TextStyle(
+              color: Colors.grey[600],
+              fontWeight: FontWeight.w500,
+              fontSize: 16),
         ),
       ),
       Image.asset(
@@ -81,7 +83,7 @@ Widget nameAndTimeText(Post post) {
       Row(
         children: [
           Text(
-            "${post.time} .",
+            "${post.time}h .",
             style: const TextStyle(
                 color: AppColors.gray,
                 fontSize: 12,
